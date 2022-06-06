@@ -1,3 +1,5 @@
+
+
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -9,6 +11,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 @TestInstance(Lifecycle.PER_CLASS)
 public class PersonTest {
+
     Person pessoa;
 
     @BeforeAll
@@ -47,7 +50,7 @@ public class PersonTest {
     }
 
     @ParameterizedTest
-    @ValueSource(strings = { "abC123456$”, “Hbtn@1234”, “Betty@1#2”, “Hbtn@123" })
+    @ValueSource(strings = { "abC123456$", "Hbtn@1234", "Betty@1#2", "Hbtn@123" })
     void check_password_valid(String senha) {
         assertTrue(pessoa.checkPassword(senha));
     }
